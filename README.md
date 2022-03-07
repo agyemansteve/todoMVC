@@ -1,15 +1,8 @@
 # todo MVC
 ### https://todos-crud-mvc.herokuapp.com/
 
-This app illustrates how to use [Passport](https://www.passportjs.org/) with
-[Express](https://expressjs.com/) to sign users in with a username and password.
-Use this example as a starting point for your own web applications.
 
 ## Overview
-
-This example illustrates how to use Passport and the [`passport-local`](https://www.passportjs.org/packages/passport-local/)
-strategy within an Express application to sign users in with a username and
-password.
 
 This app implements the features of a typical [TodoMVC](https://todomvc.com/)
 app, and adds sign in functionality. This app is a traditional web application,
