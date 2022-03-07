@@ -1,6 +1,6 @@
 var sqlite3 = require("sqlite3");
 var mkdirp = require("mkdirp");
-var crypto = require("crypto");
+// var crypto = require("crypto");
 
 mkdirp.sync("var/db");
 

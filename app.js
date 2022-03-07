@@ -9,7 +9,7 @@ const logger = require("morgan");
 
 // pass the session to the connect sqlite3 module
 // allowing it to inherit from session.Store
-const SQLiteStore = require("connect-sqlite3")(session);
+// const SQLiteStore = require("connect-sqlite3")(session);
 
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
@@ -32,7 +32,11 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false, // don't save session if unmodified
     saveUninitialized: false, // don't create session until something stored
-    store: new SQLiteStore({ db: "sessions.db", dir: "var/db" }),
+    cookie: {
+      secure: false,
+      maxAge: 24 * 60 * 60 * 1000,
+    },
+    // store: new SQLiteStore({ db: "sessions.db", dir: "var/db" }),
   })
 );
 app.use(csrf());
